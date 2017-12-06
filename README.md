@@ -1,15 +1,21 @@
 # ReactiveFE
 
-npm install
+Frontend in angular for reactive application:
 
-ng server
+https://github.com/milanbr/reactive
 
-## Observables
+### Starting application
+
+`npm install`
+
+`ng serve`
+
+### Observables
 
 user.component.html:
 `{{users}}`
 
-## Server sent events
+### Server sent events
 
 user.component.html:
 `{{users$ | async}}`
@@ -18,7 +24,7 @@ The async pipe subscribes to an Observable and returns the latest value it has e
 
 In browser is seen in Request Headers: Accept:text/event-stream and EventStream.
 
-## Web socket
+### Web socket
 
 user.component.html: 
 `{{usersWs$ | async}}`
