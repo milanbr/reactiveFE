@@ -1,0 +1,31 @@
+<div class="container-fluid m-1">
+  <div>
+    <h2>Observables</h2>
+    {{users}}
+    <button (click)="getUsersClick()" class="btn btn-primary">Get users</button>
+  </div>
+
+  <br/>
+
+  <div>
+    <h2>Server sent events</h2>
+    {{users$ | async}}
+    <button (click)="getUsersSseClick()" class="btn btn-primary">Get users</button>
+  </div>
+
+  <div>
+    <div>
+      <h2>Web socket</h2>
+      {{usersWs$ | async}}
+      <button (click)="getUsersWsClick()" class="btn btn-primary">Get users</button>
+    </div>
+
+    <div>
+      <label>
+        <input type="text" #msgInput>
+      </label>
+
+      <button (click)="sendMessageWS(msgInput.value)" class="btn btn-primary">Send message</button>
+    </div>
+  </div>
+</div>
