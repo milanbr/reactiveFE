@@ -7,7 +7,6 @@ import {HttpModule} from '@angular/http';
 import {UserService} from './user/user.service';
 import {SseService} from './user/sse.service';
 import {WebsocketService} from './user/websocket.service';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -16,8 +15,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
-    NgbModule.forRoot()
+    HttpModule
   ],
   providers: [UserService, SseService, WebsocketService],
   bootstrap: [AppComponent]
